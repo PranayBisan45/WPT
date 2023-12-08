@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <script>
+      function f1() {
+        let l=parseInt(document.getElementById("t1").value)
+        let d=document.getElementById("s1").value
+        let output
+        switch(d) {
+          case "Dollar":output=l/83.38;break;
+          case "Euro":output=l/89.91;break;
+          case "Yen":output=l/0.58;break;
+          case "Dhiram":output=l/22.71;break;
+        }
+        let o=`${d} ${"is"} ${output}`
+        document.getElementById("id1").innerHTML=o
+      }
+    </script>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url(Pranay.jpg);
+        }
+    </style>
+    <center>
+  <h1 style="color:blue;">Currency Converter</h1> </br>
+  Enter Amount in Rs. : <input type="number" id="t1"/>
+  Select Currency: <select id="s1" onchange="f1()">
+    <option>Select</option>
+    <option>Dollar</option>
+    <option>Euro</option>
+    <option>Yen</option>
+    <option>Dhiram</option>
+  </select>
+  <p><b> Amount: </b><span id="id1" style=background-color:chartreuse;"></span></p>
+  <a href = ""><input type="button" value="Refresh"/></a>
+  <button onclick="window.location.href='file:///C:/Users/pranay/Desktop/WPT/Practice/HTML/CurrencyConverter.html'"></button>
+
+</center>
+</body>
+</html>
