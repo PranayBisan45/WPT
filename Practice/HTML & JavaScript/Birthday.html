@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday</title>
+    <script>
+        function f1() {
+            let current=new Date()
+       let date=new Date(document.getElementById("b1").value)
+    //    let year=date.getFullYear()
+     //   let y=`${"Your Birth Year is "} ${year}`
+     //   document.getElementById("p1").innerHTML=y
+
+        if(date<current) {
+            var a=`${"Your Birthday has Passed"}`
+        }
+        else {
+            var a=`${"Your Birthday is yet to come"}`
+        }
+        document.getElementById("p1").innerHTML=a
+    }
+    </script>
+</head>
+<body>
+    <center>
+        <h1 style="color: chocolate;">Birthday</h1>
+        <span style="color: blue;"> Enter Original Birthday: </span><input type="date"> <br><br>
+        <span style="color: blue;"> Enter Current Birthday: </span><input type="date" id="b1">
+        <input type="button" value="submit" id="s1" onclick="f1()">
+        <p><span id="p1"></span></p>
+        <a href="file:///C:/Users/pranay/Desktop/WPT/Day2/code/javascript/Birthday.html">Refresh</a>
+    </center>
+</body>
+</html>

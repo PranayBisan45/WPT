@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations</title>
+    <script>
+        function f1() {
+        let a=parseInt(document.getElementById("n1").value)
+        let b=parseInt(document.getElementById("n2").value)
+        let c=document.getElementById("op").value
+        let output
+        switch(c) {
+            case "+":output=a+b;break;
+            case "-":output=a-b;break;
+            case "*":output=a*b;break;
+            case "/":output=a/b;break;
+        }
+        let o=`${"Output is"} ${output}`
+        document.getElementById("c1").innerHTML=o
+    }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Operations</h1>
+        <span style="color: blue;">Enter the Number 1: </span><input type="number" id="n1"><br>
+        <span style="color: blue;">Enter the Number 2: </span><input type="number" id="n2"> <br>
+        <br>
+       <span style="color: blue;">Select Operation: </span><select id="op" onclick="f1()">
+        <option>Select Op</option>
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <p><span style="color: blue;"<b>Calculation: </b></span> <span id="c1" style="color: black;"></span></b></p><br>
+    <a href="file:///C:/Users/pranay/Desktop/WPT/Practice/HTML/Prac.html">Refresh</a>
+    <h1>😃🙌😎</h1>
+    </center>
+</body>
+</html>
