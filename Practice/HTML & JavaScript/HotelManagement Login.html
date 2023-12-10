@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        function f1() {
+        let a=document.getElementById("id1").value
+        var b=document.getElementById("Pass1").value
+        if(b=="pranay") {
+           document.forms[0].submit();
+        }
+        else {
+            alert("Oops!! Password is Incorrect")
+        }
+    }
+    </script>
+</head>
+<body>
+    <a href="file:///C:/Users/pranay/Desktop/WPT/Practice/HTML%20&%20JavaScript/Sign.html">Back</a>
+    <center>
+    <h1 style="color: aqua;">Hotel Paradox 🏨</h1> <br>
+    <h3>Login</h3>
+    <form action="file:///C:/Users/pranay/Desktop/WPT/Practice/HTML%20&%20JavaScript/HotelParadox.html">
+       <span style="color: blue;"> Enter ID: </span><input type="Number" id="id1" value="441106" readonly>
+        <br>
+       <span style="color: blue;"> Enter Password:</span> <input type="password" id="Pass1">
+      <input type="button" id="s1" value="Submit" onclick="f1()">
+    </form>
+</center>
+</body>
+</html>
