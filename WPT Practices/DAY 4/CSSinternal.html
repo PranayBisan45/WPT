@@ -1,0 +1,113 @@
+<!--Internal CSS to currency Convertor-->
+<html>
+    <head>
+        <style>
+            *{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 1.5 em;
+                font-style: oblique;
+                font-weight: bold;
+            }
+            div{
+                background-color: aliceblue;
+                border-color: black;
+                border-style: solid;
+                border-width: 4px;
+                border-spacing: 20px;
+                padding: 5px;               
+                width: 30%;
+            }
+            #p1{
+                    padding: 10 px;
+                    color: red;
+            }
+            .container{
+                margin-left: 150px;
+                border-radius: 5px;
+                border-style: solid;
+                text-align: center;
+                width: 100px;
+            }
+
+        </style>
+        <script>
+            function currconvertor(){
+            var fromCurrency=document.getElementById("frcur").value
+            var toCurrency=document.getElementById("tocur").value
+            var amount=parseFloat(document.getElementById("amt").value)
+            var result
+            if(fromCurrency=="USD" && toCurrency=="INR"){
+                result=amount * 75
+            }
+            if(fromCurrency=="INR" && toCurrency=="USD"){
+                result=amount * (1/75)
+            }
+            if(fromCurrency=="GBP" && toCurrency==INR){
+                result=amount * 95
+            }
+            if(fromCurrency=="INR" && toCurrency=="GBP"){
+                result=amount * (1/95)
+            }
+            if(fromCurrency=="USD" && toCurrency=="GBP"){
+                result=amount * 0.75
+            }
+            if(fromCurrency=="GBP" && toCurrency=="USD"){
+                result=amount * 1.33
+            }
+            var str=""
+            var tstr=""
+            if(fromCurrency=="USD"){ 
+                str="&#36;"
+            }
+            if(toCurrency=="USD"){
+                tstr="&#36;"
+            }
+            if(fromCurrency=="INR"){ 
+                str="&#8377;"
+            }
+            if(toCurrency=="INR"){
+                tstr="&#8377;"
+            }
+            if(fromCurrency=="GBP"){
+                str="&#163;"
+            }
+            if(toCurrency=="GBP"){
+                tstr="&#163;"
+            }
+            document.getElementById("p1").innerHTML=` ${amount} ${str} = ${result.toFixed(2)} ${tstr}`
+            }
+      </script>
+    </head>
+    <body style="font-size: x-large;">
+        <h1>Currency Convertor</h1><br>
+        <div>
+        <label for="frcur">From</label>: 
+        <select id="frcur">
+            <option>Select</option>
+            <option value="INR">Rupee (INR)</option>
+            <option value="USD">Dollar (USD)</option>
+            <option value="GBP">Pound (GBP)</option>
+        </select>
+        </div><br><br>
+        <div>  
+        <label for="amt">Amount</label>:
+        <input id="amt" type="number" placeholder="Enter a Number"/>
+        </div><br><br>
+        <div> 
+        <label for="tocur">To</label>: 
+        <select id="tocur">
+            <option>Select</option>
+            <option value="INR">Rupee (INR)</option>
+            <option value="USD">Dollar (USD)</option>
+            <option value="GBP">Pound (GBP)</option>
+        </select>
+        </div>
+        <br>
+        <button onclick="currconvertor()" class="container">Convert</button>
+        <br><br>
+        <div>
+        <span id="p1">Result will be displayed here</span>
+        </div>
+
+    </body>
+    </html>

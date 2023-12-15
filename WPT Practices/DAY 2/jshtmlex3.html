@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Operations</title>
+        <script>
+            function calculate()
+            {
+                let x=parseInt(document.getElementById("f1").value)
+                let y=parseInt(document.getElementById("s1").value)
+                let opt=document.getElementById("Operation").value
+                let result
+                switch (opt) {
+                    case '+': result=x+y ;break;
+                    case '-': result=x-y ;break;
+                    case '*': result=x*y ;break;
+                    case '/': result=x/y ;break;
+                }
+                let outputstr=`<b> ${x} ${opt} ${y} = ${result} </b>`
+                document.getElementById("sp1").innerHTML=outputstr
+            }
+        </script>
+    </head>
+    <body  style="font-size:x-large; padding-left: 30%;">
+        <label>Enter First Number</label>: <input type="number" value="0" id="f1"/><br>
+        <br>
+        <label>Enter Second Number</label>: <input type="number" value="0" id="s1"/><br>
+        <br>
+        <label>Select Operation</label>: <select id="Operation" onchange="calculate()">
+            <option>select op</option>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select><br>
+        <br>
+        <p>The Result is <span id="sp1"></span></p>
+    </body>
+</html>

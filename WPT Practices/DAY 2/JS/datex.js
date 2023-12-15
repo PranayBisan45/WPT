@@ -1,0 +1,12 @@
+let today=new Date()
+console.log(today)
+console.log(today.getDate(),"-",today.getMonth()+1,"-",today.getFullYear())
+console.log(today.getDay())
+let indDay=new Date(2024,7,15)
+console.log(indDay.getDay())
+let yearend=new Date("2023-12-31")
+console.log(yearend.getDay())
+let bdate=new Date(2001,2,26)
+console.log(bdate.getDay())
+let diff=today-bdate
+console.log(diff,"ms")

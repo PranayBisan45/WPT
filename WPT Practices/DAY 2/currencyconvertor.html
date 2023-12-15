@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <script>
+            function currconvertor(){
+            var fromCurrency=document.getElementById("frcur").value
+            var toCurrency=document.getElementById("tocur").value
+            var amount=parseFloat(document.getElementById("amt").value)
+            var result
+            if(fromCurrency=="USD" && toCurrency=="INR"){
+                result=amount * 75
+            }
+            if(fromCurrency=="INR" && toCurrency=="USD"){
+                result=amount * (1/75)
+            }
+            if(fromCurrency=="GBP" && toCurrency==INR){
+                result=amount * 95
+            }
+            if(fromCurrency=="INR" && toCurrency=="GBP"){
+                result=amount * (1/95)
+            }
+            if(fromCurrency=="USD" && toCurrency=="GBP"){
+                result=amount * 0.75
+            }
+            if(fromCurrency=="GBP" && toCurrency=="USD"){
+                result=amount * 1.33
+            }
+            var str=""
+            var tstr=""
+            if(fromCurrency=="USD"){ 
+                str="&#36;"
+            }
+            if(toCurrency=="USD"){
+                tstr="&#36;"
+            }
+            if(fromCurrency=="INR"){ 
+                str="&#8377;"
+            }
+            if(toCurrency=="INR"){
+                tstr="&#8377;"
+            }
+            if(fromCurrency=="GBP"){
+                str="&#163;"
+            }
+            if(toCurrency=="GBP"){
+                tstr="&#163;"
+            }
+            document.getElementById("p1").innerHTML=` ${amount} ${str} = ${result.toFixed(2)} ${tstr}`
+            }
+      </script>
+    </head>
+    <body style="font-size: x-large;">
+        <h1>Currency Convertor</h1>
+        <label for="frcur">From</label>: 
+        <select id="frcur">
+            <option>Select</option>
+            <option value="INR">Rupee (INR)</option>
+            <option value="USD">Dollar (USD)</option>
+            <option value="GBP">Pound (GBP)</option>
+        </select>  
+        <label for="amt">Amount</label>:
+        <input id="amt" type="number" placeholder="Enter a Number"/>
+        <label for="tocur">To</label>: 
+        <select id="tocur">
+            <option>Select</option>
+            <option value="INR">Rupee (INR)</option>
+            <option value="USD">Dollar (USD)</option>
+            <option value="GBP">Pound (GBP)</option>
+        </select>
+        <button onclick="currconvertor()">Convert</button>
+        <p id="p1">Result will be displayed here</p>
+    </body>
+</html>

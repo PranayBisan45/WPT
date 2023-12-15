@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            function f1(){
+                let inpt=document.getElementById("s1")
+                //let s=inpt.value
+                //console.log(s.toUpperCase()) -->it shows uppercase on console
+                let ustr=inpt.value.toUpperCase()
+                document.getElementById("p1").innerHTML=ustr
+            }
+        </script>
+    </head>
+    <body style="font-size: x-large; padding-left: 30%;">
+        <label>Enter String</label>: <input type="text" id="s1"/><br>
+        <br>
+        <input type="button" style="font-size: large; background-color: cornsilk;" value="Show Uppercase" onclick="f1()"/><br>
+        <br>
+        <p id="p1"></p>
+    </body>
+</html>

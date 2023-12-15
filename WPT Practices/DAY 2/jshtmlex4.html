@@ -1,0 +1,40 @@
+<html>
+    <head>
+     <script>
+        function casechange()
+        {
+            let nm=document.getElementById("t1").value
+            let uc=document.getElementById("r1").checked
+            let lc=document.getElementById("r2").checked
+            let tc=document.getElementById("r3").checked
+            let outputstr=nm;
+            if(uc)
+            {
+                outputstr=nm.toUpperCase()
+            }
+            if(lc)
+            {
+                outputstr=nm.toLowerCase()
+            }
+            if(tc)
+            {
+                let first=nm.charAt(0).toUpperCase()
+                let second=nm.substring(1).toLowerCase()
+                outputstr=first+second
+            }
+            document.getElementById("sp").innerHTML=outputstr
+        }
+     </script>
+    </head>
+    <body>
+        <label>Enter a Name</label>: <input type="text" id="t1" onblur="casechange()"/><br>
+        <br>
+        <label>Uppercase</label>: <input id="r1" type="radio" name="rd" onclick="casechange()"/><br>
+        <br>
+        <label>Lowercase</label>: <input id="r2" type="radio" name="rd" onclick="casechange()"/><br>
+        <br>
+        <label>Titlecase</label>: <input id="r3" type="radio" name="rd" onclick="casechange()"/><br>
+        <br>
+        <p>Result is <span id="sp"></span></p>
+    </body>
+</html>
