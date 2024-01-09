@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $().ready(()=>{
+            $("#i1").blur(()=>{
+                let str=$("#i1").val()
+                let ustr=str.toUpperCase()
+                $("p").html(`<b>${ustr}<b>`)
+            })
+        })
+    </script>
+</head>
+<body>
+    <a href="file:///C:/Users/pranay/Desktop/J-Query/2.html">Refresh</a> <br><br><br>
+    <input type="text" id="i1">
+    <p></p>
+</body>
+</html>

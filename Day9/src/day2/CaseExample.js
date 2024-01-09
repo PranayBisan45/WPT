@@ -9,6 +9,7 @@ export default class CaseExample extends React.Component
         this.state={str:"",rev:"",original:""}
     }
 
+    
     radioHandler=(event)=>{
 
         switch(event.target.id)

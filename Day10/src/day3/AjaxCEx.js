@@ -52,6 +52,4 @@ export default class AjaxCEx extends React.Component
             </div>
         )
     }
-
-
 }

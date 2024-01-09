@@ -17,19 +17,13 @@ export default class HalfString extends React.Component
     
     }
 
-
-    // handler(event)
-    // {
-    //     console.log(event.target.value)
-    //     this.setState({half:event.target.value})
-    // }
-
     render()
     {
         return (
             <div className="inner">
                 Enter String : <input 
                                 type="text"
+
                                 onBlur={this.handler} />
                 <p>Half String = {this.state.half}</p>
             </div>

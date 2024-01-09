@@ -26,11 +26,13 @@ obj.show()
 console.log(typeof(obj.show))
 
 console.log(typeof(obj))
-let rv = JSON.stringify(obj)
+let rv = JSON.stringify(obj) // Convert a JavaScript object into a string
 console.log(typeof(rv))
 console.log(rv.fname)
 
-let o =JSON.parse(rv)
+let o =JSON.parse(rv)   //data becomes a JavaScript object.
+
+
 console.log(typeof(o), o.fname)
 
 

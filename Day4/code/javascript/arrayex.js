@@ -12,25 +12,3 @@ console.log(arr)
 
 arr.splice(1,1,20,30)
 console.log(arr)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

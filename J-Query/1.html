@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+     crossorigin="anonymous"></script>
+    <script>
+       $().ready(()=>{
+            console.log("document is ready")
+
+        $("#i1").click(()=>{
+            console.log("Button is clicked");
+        })
+
+        $("#i2").click(()=>{
+            console.log("Button is not clicked")
+        })
+    }) 
+
+   
+    </script>
+</head>
+<body>
+    <input type="button" value="ok" id="i1"/>
+    <br>
+    <input type="button" value="not ok" id="i2"/>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JQuery.3.6.1.js"></script>
+    <script>
+        $().ready(()=>{
+            let flag=false
+            $("#b1").click(()=>{
+                if(!flag){
+                    $("#i1").hide()
+                   flag=true
+                }
+                else{
+                    $("#i1").show()
+                  flag=false
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="toggle" id="b1">
+    <p id="i1">Sanyog</p>
+</body>
+</html>
